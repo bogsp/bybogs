@@ -1,0 +1,107 @@
+@import './variables';
+@import './defaults';
+@import './layout';
+.misc {
+    display: none;
+}
+
+.title {
+    width: 80vh;
+    position: absolute;
+    bottom: -7%;
+    left: $gutter * .8;
+    transform-origin: left;
+    transform: rotate(-90deg);
+    h1 {
+        font-size: $fontSize * 5;
+        margin-bottom: -1%;
+    }
+    ul {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        li {
+            a {
+                font-size: $fontSize * 1.6;
+                margin-left: .25rem;
+            }
+        }
+    }
+}
+
+.bogs {
+    position: absolute;
+    bottom: 0;
+}
+
+
+/* Media Queries */
+
+@media only screen and (min-width: 768px) {
+    .title {
+        left: $gutter * 1.5;
+        h1 {
+            margin-bottom: 1%;
+        }
+    }
+    .bogs {
+        width: 80vw;
+        right: 0;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .title {
+        left: $gutter * 2.5;
+        h1 {
+            font-size: $fontSize * 6;
+        }
+        ul {
+            width: 83%;
+            li {
+                a {
+                    font-size: $fontSize * 2.3;
+                }
+            }
+        }
+    }
+    .bogs {
+        width: 60vw;
+        right: 10%;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .title {
+        left: $gutter * 1.8;
+        h1 {
+            font-size: $fontSize * 8;
+        }
+    }
+    .bogs {
+        width: 80vw;
+        right: 0;
+    }
+}
+
+@media only screen and (min-width: 2560px) {
+    .title {
+        bottom: -4%;
+        left: $gutter * 2.8;
+        h1 {
+            font-size: $fontSize * 8;
+        }
+        ul {
+            width: 45%;
+            li {
+                a {
+                    font-size: $fontSize * 2.5;
+                }
+            }
+        }
+    }
+    .bogs {
+        width: 40vw;
+        right: $gutter * 2.8;
+    }
+}

@@ -1,0 +1,27 @@
+/* Imports */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+// Colors
+$primary: #808080;
+$secondary: #afafaf;
+$highlight: #dddddd;
+$dark: #333333;
+$light: #fff;
+$success: #009900;
+$error: #990000;
+$warning: #ffbb00;
+// Typography
+$bodyFont: 'Roboto',
+sans-serif;
+$headlineFont: 'Roboto',
+sans-serif;
+$fontSize: 64%;
+$lineHeight: 1.5rem;
+$letterSpacing: .05rem;
+// Layout
+$contentW: 80vh;
+$maxW: 1440px;
+$gutter: 10%;
+// Custom Elements
+$btnPadding: .3rem 1rem;
+$btnRadius: 1rem;

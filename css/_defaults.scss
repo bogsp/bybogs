@@ -1,0 +1,170 @@
+    /* Global Styles */
+    
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+    
+    html,
+    body {
+        overflow: hidden;
+    }
+    
+    body {
+        font-family: $bodyFont;
+        font-size: $fontSize * 1.6;
+        letter-spacing: $letterSpacing;
+    }
+    
+    a {
+        text-decoration: none;
+        color: $primary;
+        &:hover {
+            opacity: .7;
+            transition: all .3s ease-in-out;
+        }
+    }
+    
+    ol,
+    ul {
+        list-style: none;
+    }
+    
+    p {
+        line-height: $lineHeight;
+        margin-bottom: 1rem;
+    }
+    
+    h1 {
+        margin-bottom: 1.5rem;
+    }
+    
+    button {
+        border: none;
+        outline: none;
+    }
+    /* Custom Elements */
+    
+    @mixin btn ($bg, $color) {
+        @extend .btn;
+        background-color: $bg;
+        color: $color;
+    }
+    
+    @mixin btnOutline ($color) {
+        @extend .btn;
+        background-color: transparent;
+        color: $color;
+        border: 1px solid $color;
+    }
+    
+    .btn {
+        padding: $btnPadding;
+        &-primary {
+            @include btn($primary, $light);
+        }
+        &-secondary {
+            @include btn($secondary, $light);
+        }
+        &-highlight {
+            @include btn($highlight, $light);
+        }
+        &-dark {
+            @include btn($dark, $light);
+        }
+        &-light {
+            @include btn($light, $dark);
+        }
+        &-success {
+            @include btn($success, $dark);
+        }
+        &-error {
+            @include btn($error, $dark);
+        }
+        &-warning {
+            @include btn($warning, $dark);
+        }
+        &-outline-primary {
+            @include btnOutline($primary);
+        }
+        &-outline-secondary {
+            @include btnOutline($secondary);
+        }
+        &-outline-highlight {
+            @include btnOutline($highlight);
+        }
+        &-outline-dark {
+            @include btnOutline($dark);
+        }
+        &-outline-light {
+            @include btnOutline($light);
+        }
+        &-outline-success {
+            @include btnOutline($success);
+        }
+        &-outline-error {
+            @include btnOutline($error);
+        }
+        &-outline-warning {
+            @include btnOutline($warning);
+        }
+        &-round {
+            border-radius: $btnRadius;
+        }
+    }
+    /* Colors */
+    /* Backgrounds */
+    
+    .primary {
+        background-color: $primary;
+    }
+    
+    .secondary {
+        background-color: $secondary;
+    }
+    
+    .highlight {
+        background-color: $highlight;
+    }
+    
+    .dark {
+        background-color: $dark;
+    }
+    
+    .light {
+        background-color: $light;
+    }
+    /* Text Colors */
+    
+    .primary-text {
+        color: $primary;
+    }
+    
+    .secondary-text {
+        color: $secondary;
+    }
+    
+    .highlight-text {
+        color: $highlight;
+    }
+    
+    .dark-text {
+        color: $dark;
+    }
+    
+    .light-text {
+        color: $light;
+    }
+    
+    .success-text {
+        color: $success;
+    }
+    
+    .error-text {
+        color: $error;
+    }
+    
+    .warning-text {
+        color: $warning;
+    }
